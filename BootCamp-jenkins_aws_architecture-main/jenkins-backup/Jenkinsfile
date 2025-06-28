@@ -15,7 +15,7 @@ environment {
 stages{
   stage('Run Backup Script'){
     steps {
-        dir("./jenkins-backup"){
+        dir("BootCamp-jenkins_aws_architecture-main/jenkins-backup"){
           sh "ls"
           sh "chmod +x ./jenkins_backup.sh && sudo ./jenkins_backup.sh /var/lib/jenkins $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY"
         }
